@@ -1,0 +1,23 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = 'Hugo JSON Feed'
+license = 'MIT'
+licenselink = 'https://github.com/hugo-fixit/hugo-json-feed/LICENSE'
+description = 'Hugo theme component for JSON feed custom Output Format.'
+min_version = "0.127.0"
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/hugo-fixit/hugo-json-feed'
+
+# If you have a running demo of the theme
+demosite = 'https://lruihao.cn'
+
+# Taxonomy terms
+tags = ['component', 'feed', 'json', 'output-format']
+features = ['json-feed']
+
+# If the theme has a single author
+[author]
+  name = 'Lruihao'
+  homepage = 'https://lruihao.cn'
