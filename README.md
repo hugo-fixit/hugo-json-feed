@@ -75,9 +75,9 @@ You can set the following parameters in your site configuration file:
     # Term list feed config for JSON feed.
     [params.list.feed]
       # The number of posts to include in the feed. If set to -1, all posts.
-      limit = 10
+      limit = -1
       # whether to show the full text content in feed.
-      fullText = true
+      fullText = false
 ```
 
 ### Front Matter
