@@ -36,6 +36,32 @@
   # <baseURL>/tags/foo/feed.json etc.
   term = ["html", "rss", "jsonfeed"]
 
+[params]
+  # Global Feed config for JSON feed.
+  [params.feed]
+    # The number of posts to include in the feed. If set to -1, all posts.
+    limit = 10
+    # whether to show the full text content in feed.
+    fullText = true
+
+  # Section page config (all pages in section)
+  [params.section]
+    # Section feed config for JSON feed.
+    [params.section.feed]
+      # The number of posts to include in the feed. If set to -1, all posts.
+      limit = -1
+      # whether to show the full text content in feed.
+      fullText = false
+
+  # Term list (category or tag) page config
+  [params.list]
+    # Term list feed config for JSON feed.
+    [params.list.feed]
+      # The number of posts to include in the feed. If set to -1, all posts.
+      limit = -1
+      # whether to show the full text content in feed.
+      fullText = false
+
 [module]
   [module.hugoVersion]
     extended = true
