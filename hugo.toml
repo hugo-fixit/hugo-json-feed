@@ -1,3 +1,41 @@
+# -------------------------------------------------------------------------------------
+# Media Types
+# See: https://gohugo.io/templates/output-formats/#media-types
+# -------------------------------------------------------------------------------------
+
+[mediaTypes]
+  # Options to make output feed.json files
+  # Warning: The application/feed+json media type will cause an unknown error in resources.GetRemote!
+  # [mediaTypes."application/feed+json"]
+  #   suffixes = ["json"]
+
+# -------------------------------------------------------------------------------------
+# Output Format Definitions
+# See: https://gohugo.io/templates/output-formats/#output-format-definitions
+# -------------------------------------------------------------------------------------
+
+[outputFormats]
+  # Options to make output feed.json file
+  [outputFormats.jsonfeed]
+    baseName = "feed"
+    # Warning: The application/feed+json media type will cause an unknown error in resources.GetRemote!
+    mediaType = "application/json"
+    isPlainText = true
+    isHTML = false
+
+# -------------------------------------------------------------------------------------
+# Customizing Output Formats
+# See: https://gohugo.io/templates/output-formats/#customizing-output-formats
+# -------------------------------------------------------------------------------------
+
+[outputs]
+  # <baseURL>/feed.json
+  home = ["html", "rss", "jsonfeed"]
+  # <baseURL>/posts/feed.json etc.
+  section = ["html", "rss", "jsonfeed"]
+  # <baseURL>/tags/foo/feed.json etc.
+  term = ["html", "rss", "jsonfeed"]
+
 [module]
   [module.hugoVersion]
     extended = true
