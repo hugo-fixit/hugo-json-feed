@@ -1,4 +1,4 @@
-{{- $title := printf "%s %s" .Title (T .Data.Singular | default .Data.Singular) -}}
+{{- $title := printf "%s - %s" .Title (T .Data.Singular | default .Data.Singular) -}}
 {{- if .Site.Params.withSiteTitle -}}
   {{- $title = printf "%s %s %s" $title .Site.Params.titleDelimiter .Site.Title -}}
 {{- end -}}
