@@ -9,8 +9,8 @@
 ## 演示
 
 - [主页 Feed](https://lruihao.cn/feed.json)
-- [分类 Feed](https://lruihao.cn/posts/feed.json)
-- [标签 Feed](https://lruihao.cn/collections/project/feed.json)
+- [文章 Feed](https://lruihao.cn/posts/feed.json)
+- [列表 Feed](https://lruihao.cn/collections/project/feed.json)
 
 ## 安装组件
 
