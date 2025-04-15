@@ -5,7 +5,7 @@ name = 'Hugo JSON Feed'
 license = 'MIT'
 licenselink = 'https://github.com/hugo-fixit/hugo-json-feed/LICENSE'
 description = 'Hugo theme component for JSON feed custom Output Format.'
-min_version = "0.127.0"
+min_version = "0.146.3"
 
 # The home page of the theme, where the source can be found
 homepage = 'https://github.com/hugo-fixit/hugo-json-feed'
