@@ -1,3 +1,10 @@
 {{- $options := dict "Site" .Site "Config" .Site.Params.feed "OutputFormats" .OutputFormats -}}
-{{- $options = dict "Title" .Site.Title "Pages" (.Scratch.Get "mainSectionPages") | merge $options -}}
+{{- $pages := .Site.Store.Get "mainSectionPages" -}}
+{{- if not $pages -}}
+  {{- $pages = where .Site.RegularPages "Section" "in" .Site.MainSections -}}
+  {{- $pages = $pages | union (where .Site.RegularPages "Type" "in" .Site.MainSections) -}}
+  {{- .Site.Store.Set "mainSectionPages" $pages -}}
+{{- end -}}
+{{- $options = dict "Site" .Site "Config" $options "OutputFormats" .OutputFormats -}}
+{{- $options = dict "Title" .Site.Title "Pages" $pages | merge $options -}}
 {{- partial "feed/json.html" $options -}}
