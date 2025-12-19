@@ -1,68 +1,73 @@
 # -------------------------------------------------------------------------------------
-# Media Types
-# See: https://gohugo.io/templates/output-formats/#media-types
+# Media Types Configuration
+# See: https://gohugo.io/configuration/media-types/
 # -------------------------------------------------------------------------------------
 
 [mediaTypes]
-  # Options to make output feed.json files
-  # Warning: The application/feed+json media type will cause an unknown error in resources.GetRemote!
-  # [mediaTypes."application/feed+json"]
-  #   suffixes = ["json"]
+# Options to make output feed.json files
+# Warning: The application/feed+json media type will cause an unknown error in resources.GetRemote!
+# [mediaTypes."application/feed+json"]
+# suffixes = ["json"]
 
 # -------------------------------------------------------------------------------------
-# Output Format Definitions
-# See: https://gohugo.io/templates/output-formats/#output-format-definitions
+# Output Format Configuration
+# See: https://gohugo.io/configuration/output-formats/
 # -------------------------------------------------------------------------------------
 
 [outputFormats]
-  # Options to make output feed.json file
-  [outputFormats.jsonfeed]
-    baseName = "feed"
-    # Warning: The application/feed+json media type will cause an unknown error in resources.GetRemote!
-    mediaType = "application/json"
-    isPlainText = true
-    isHTML = false
+
+# Options to make output feed.json file
+[outputFormats.jsonfeed]
+baseName = "feed"
+# Warning: The application/feed+json media type will cause an unknown error in resources.GetRemote!
+mediaType = "application/json"
+isPlainText = true
+isHTML = false
 
 # -------------------------------------------------------------------------------------
-# Customizing Output Formats
-# See: https://gohugo.io/templates/output-formats/#customizing-output-formats
+# Output Configuration
+# See: https://gohugo.io/configuration/outputs/
 # -------------------------------------------------------------------------------------
 
 [outputs]
-  # <baseURL>/feed.json
-  home = ["html", "rss", "jsonfeed"]
-  # <baseURL>/posts/feed.json etc.
-  section = ["html", "rss", "jsonfeed"]
-  # <baseURL>/tags/foo/feed.json etc.
-  term = ["html", "rss", "jsonfeed"]
+# <baseURL>/feed.json
+home = ["html", "rss", "jsonfeed"]
+# <baseURL>/posts/feed.json etc.
+section = ["html", "rss", "jsonfeed"]
+# <baseURL>/tags/foo/feed.json etc.
+term = ["html", "rss", "jsonfeed"]
 
 [params]
-  # Global Feed config for JSON feed.
-  [params.feed]
-    # The number of posts to include in the feed. If set to -1, all posts.
-    limit = 10
-    # whether to show the full text content in feed.
-    fullText = true
 
-  # Section page config (all pages in section)
-  [params.section]
-    # Section feed config for JSON feed.
-    [params.section.feed]
-      # The number of posts to include in the feed. If set to -1, all posts.
-      limit = -1
-      # whether to show the full text content in feed.
-      fullText = false
+# Global Feed config for JSON feed.
+[params.feed]
+# The number of posts to include in the feed. If set to -1, all posts.
+limit = 10
+# whether to show the full text content in feed.
+fullText = true
 
-  # Term list (category or tag) page config
-  [params.list]
-    # Term list feed config for JSON feed.
-    [params.list.feed]
-      # The number of posts to include in the feed. If set to -1, all posts.
-      limit = -1
-      # whether to show the full text content in feed.
-      fullText = false
+# Section page config (all pages in section)
+[params.section]
+
+# Section feed config for JSON feed.
+[params.section.feed]
+# The number of posts to include in the feed. If set to -1, all posts.
+limit = -1
+# whether to show the full text content in feed.
+fullText = false
+
+# Term list (category or tag) page config
+[params.list]
+
+# Term list feed config for JSON feed.
+[params.list.feed]
+# The number of posts to include in the feed. If set to -1, all posts.
+limit = -1
+# whether to show the full text content in feed.
+fullText = false
 
 [module]
-  [module.hugoVersion]
-    extended = true
-    min = "0.146.3"
+
+[module.hugoVersion]
+extended = true
+min = "0.146.7"
