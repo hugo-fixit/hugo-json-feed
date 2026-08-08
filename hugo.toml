@@ -4,10 +4,10 @@
 # -------------------------------------------------------------------------------------
 
 [mediaTypes]
+
 # Options to make output feed.json files
-# Warning: The application/feed+json media type will cause an unknown error in resources.GetRemote!
-# [mediaTypes."application/feed+json"]
-# suffixes = ["json"]
+[mediaTypes."application/feed+json"]
+suffixes = [ "json" ]
 
 # -------------------------------------------------------------------------------------
 # Output Format Configuration
@@ -19,8 +19,7 @@
 # Options to make output feed.json file
 [outputFormats.jsonfeed]
 baseName = "feed"
-# Warning: The application/feed+json media type will cause an unknown error in resources.GetRemote!
-mediaType = "application/json"
+mediaType = "application/feed+json"
 isPlainText = true
 isHTML = false
 

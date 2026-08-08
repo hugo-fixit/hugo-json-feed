@@ -16,7 +16,7 @@
   {{ with .OutputFormats.Get "feed" -}}
   "feed_url": "{{ .Permalink }}",
   {{ end -}}
-  {{ with .Site.Language.LanguageCode -}}
+  {{ with .Site.Language.Locale -}}
   "language": "{{ . }}",
   {{ end -}}
   "icon": "{{ `/apple-touch-icon.png` | absURL }}",
